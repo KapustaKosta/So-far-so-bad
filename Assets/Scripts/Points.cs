@@ -13,6 +13,10 @@ public class Points
     {
         return instanceList[instanceList.Count - 1];
     }
+    public static Points getPenultimateInstance()
+    {
+        return instanceList[instanceList.Count - 2];
+    }
     public static int CurrentChunk = 1;
 
     public const int pointsForGear = 10;

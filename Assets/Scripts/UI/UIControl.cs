@@ -25,8 +25,15 @@ public class UIControl : MonoBehaviour
         }
         set
         {
-            if(value < 0 || value > 1)
-                Debug.LogError("Ну я тебя поздравляю, ты передал в healthIndicatorWidth значение больше единицы. Так делать нельзя healthIndicatorWidth должно быть % здоровья игрока в десятичной дроби.");
+            if(value < 0)
+            {
+                value = 0;
+            }
+            if (value > 1)
+            {
+                value = 1;
+            }
+                //Debug.LogError("Ну я тебя поздравляю, ты передал в healthIndicatorWidth значение больше единицы. Так делать нельзя healthIndicatorWidth должно быть % здоровья игрока в десятичной дроби.");
             float targetValue = value * healthIndicatorStartWidth;
             Rect rect = healthIndicator.rectTransform.rect;
             healthIndicator.rectTransform.sizeDelta = new Vector2(targetValue, rect.height);

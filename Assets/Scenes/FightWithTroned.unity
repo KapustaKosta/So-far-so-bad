@@ -547,6 +547,7 @@ RectTransform:
   m_Children:
   - {fileID: 1080319171}
   - {fileID: 755134225}
+  - {fileID: 333438747}
   - {fileID: 1868708447}
   m_Father: {fileID: 276207930}
   m_RootOrder: 3
@@ -1189,6 +1190,99 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327180179}
+  m_CullTransparentMesh: 1
+--- !u!1 &333438746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 333438747}
+  - component: {fileID: 333438750}
+  - component: {fileID: 333438749}
+  - component: {fileID: 333438748}
+  m_Layer: 5
+  m_Name: Points
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &333438747
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333438746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 170472954}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000061035156, y: -51}
+  m_SizeDelta: {x: 395.26, y: 30.12}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &333438748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333438746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dee80f864db407489a6f1e11ce02317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 333438749}
+--- !u!114 &333438749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333438746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 0d8398bef575611419961c9c919ec23a, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 300
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "0 \u043E\u0447\u043A\u043E\u0432"
+--- !u!222 &333438750
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333438746}
   m_CullTransparentMesh: 1
 --- !u!1 &393401961
 GameObject:
@@ -1835,6 +1929,7 @@ MonoBehaviour:
   deathClip: {fileID: 8300000, guid: 5a43560951ede8c4587dc02f9054d73e, type: 3}
   damageClip: {fileID: 8300000, guid: 9f1d60d8262144e47b9a5a4f5af24a03, type: 3}
   gearPickUpClip: {fileID: 8300000, guid: 3e6c5433da4e1c74b83f16871705cf05, type: 3}
+  powerUpClip: {fileID: 0}
 --- !u!82 &1037062152
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2489,11 +2584,11 @@ RectTransform:
   m_LocalScale: {x: 0.999909, y: 0.999909, z: 0.999909}
   m_Children: []
   m_Father: {fileID: 170472954}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -55.1}
+  m_AnchoredPosition: {x: 0, y: -102}
   m_SizeDelta: {x: 173.78, y: 48.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868708448
@@ -2880,7 +2975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81269fa9541a78749981e9f1bda59f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 85
+  health: 80
   radiationLevel: 0
   maxRadiationLevel: 20
   timeForNullRadiation: 5
@@ -2888,6 +2983,7 @@ MonoBehaviour:
   floorTile: {fileID: 11400000, guid: 88bceec284894bf44b683a806e7e639c, type: 2}
   openChestTile: {fileID: 0}
   gearsCounter: {fileID: 0}
+  pointCounter: {fileID: 0}
 --- !u!114 &1883111509
 MonoBehaviour:
   m_ObjectHideFlags: 0

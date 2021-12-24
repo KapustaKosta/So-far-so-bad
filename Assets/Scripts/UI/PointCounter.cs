@@ -19,11 +19,11 @@ public class PointCounter : MonoBehaviour
         {
             int count = Points.getCurrentInstance().pointCounter;
             Debug.Log("Point " + count);
-            textField.text = count.ToString();
+            textField.text = count.ToString() + " очков";
         }
         catch (System.Exception)
         {
-            textField.text = "0";
+            textField.text = "0 очков";
         }
     }
 }

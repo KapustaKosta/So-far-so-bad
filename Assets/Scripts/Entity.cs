@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class Entity : MonoBehaviour
@@ -41,7 +42,7 @@ public class Entity : MonoBehaviour
         }
 
         isThisGameObjectPlayer = gameObject.tag == GlobalFields.playerTag;
-        if (isThisGameObjectPlayer)
+        if (isThisGameObjectPlayer && SceneManager.GetActiveScene().name == GlobalFields.gameplaySceneName)
         {
             new Points();
             Points.Counter = pointCounter;
