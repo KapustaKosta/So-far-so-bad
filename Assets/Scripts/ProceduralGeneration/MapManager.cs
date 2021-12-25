@@ -72,6 +72,11 @@ public class MapManager : MonoBehaviour
                 RemoveMap(chunkNumArray[0]);
                 chunkNumArray[0] = chunkNumArray[1];
                 chunkNumArray[1] = chunkNumArray[1] + 1;
+                itemsCount[0] += 1;
+                if (caveType == CaveType.Vrudni)
+                {
+                    itemsCount[3] += (chunkNumArray[1] % 2 == 0 ? 1 : 0);
+                }
                 GenerateMap(chunkNumArray[1]);
                 Points.CurrentChunk = chunkNumArray[1];
             }
