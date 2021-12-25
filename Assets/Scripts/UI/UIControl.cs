@@ -112,5 +112,10 @@ public class UIControl : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
     }
+
+    public void GoToScoretable()
+    {
+        SceneManager.LoadScene(GlobalFields.scoretableSceneName, LoadSceneMode.Single);
+    }
 }
 
